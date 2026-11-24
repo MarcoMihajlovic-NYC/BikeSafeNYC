@@ -1,0 +1,35 @@
+<h1>Location Search</h1>
+
+<section>
+    <h2>Search by Name</h2>
+    <form action="/locations/search" method="get" id="name-form">
+        <p>Search by keyword, examples:</p>
+        <ul>
+            <li>By street name/address (ex: Broadway, 610 Broadway)</li>
+            <li>By point of interest (ex: Prospect Park)</li>
+            <li>By bike rack type (ex: U Rack)</li>
+        </ul>
+        <label for="search-term">Location Name:</label>
+        <input type="text" id="search-term" name="searchTerm" placeholder="Broadway">
+        <button type="submit">Search</button>
+        <p id="name-error-container" style="color:red; display:none;"></p>
+    </form>
+
+    <h2>or Search by Current Location</h2>
+    <form action="/locations/find/coordinates" method="get" id="coordinates-form">
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" name="latitude">
+
+        <label for="longitude">Longitude:</label>
+        <input type="text" id="longitude" name="longitude">
+
+        <label for="coord-distance">Distance (in miles):</label>
+        <input type="text" id="coord-distance" name="distance" placeholder=".25">
+
+        <button type="button" id="use-my-location">Use my current location</button>
+        <button type="submit">Search</button>
+        
+        <p id="coordinates-error-container" style="color:red; display:none;"></p>
+    </form>
+
+</section>
